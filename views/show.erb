@@ -1,0 +1,20 @@
+<html>
+<body>
+  <header>
+    <h1>Student</h1>
+    <a href="/students">go home</a>
+  </header>
+  <p><%= thisstudent[:f_name]%> <%=thisstudent[:l_name]%> is a student of Hogwarts.</p>
+  <h3>Change <%= thisstudent[:f_name] %>'s name here:</h3>
+  <form action="/student/<%= thisstudent[:id] %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name="newname" placeholder="what's their new name?" required>
+    <button>UPDATE IT!!!1!</button>
+  </form>
+  <p><%= thisstudent[:f_name] %> can be removed here:</p>
+  <form action="/student/<%= thisstudent[:id] %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>This student has gone to the darkside</button>
+  </form>
+</body>
+</html>

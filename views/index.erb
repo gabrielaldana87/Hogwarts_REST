@@ -1,0 +1,23 @@
+<html>
+
+<body>
+  <header>
+    <h1>Hogwarts</h1>
+  </header>
+  <ul>
+    <% students.each do |key, student| %>
+    <li><%= student[:f_name] %> <%= student[:l_name] %> is a student at Hogwarts.
+      This student has an id of <a href="/student/<%= student[:id] %>">
+        <%= student[:id] %></a></li>
+        <% end %>
+      </ul>
+
+      <h3>Add a student here:</h3>
+      <form action="/student" method="post">
+        <input type="text" name="f_name" placeholder="First Name"
+        required>
+        <input type="text" name="l_name" placeholder="Last Name" required>
+        <button>ADD IT!</button>
+        </form>
+    </body>
+    </html>
