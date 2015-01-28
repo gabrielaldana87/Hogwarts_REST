@@ -1,0 +1,26 @@
+1: An API is an application that returns data to a browser or server.
+The server is basically an intermediary that consumes an API, I.E.
+communicates with the API to retrieve data, parse it, and emits it to
+the browser which visualizes the data, or can process it through an
+user interface.
+
+2: When a user types into a browser google.com, a DNS browser looks up
+the domain url and matches it to its IP address. The browser, with the
+DNS as an intermediary, makes a request to the google.com server, who
+then returns an HTML page (as well as other links) which renders the
+webpage in the browser.
+
+3: RESTful routes are necessary to process data in a streamlined,
+standardized manner.For example, the POST method allows a user to
+generate new data to be stored in the browser. The GET method allows
+a user to retrieve data bits from a server/API. The PUT method allows
+a user to mutate certain data bits (UPDATE data on the server). Finally
+the DELETE method allows a user to remove data from the server.
+
+4: An API key is usually a uniquely generated code that is optionally
+required by some API developers in order for developer servers
+to communicate with with their API data. API keys are not required by
+all API services, but those that require them would like them to be
+protected by developers accessing their APIs. Many APIs allow Developers
+to only access their APIs via keys on the server side; denying AJAX
+requests on the browser side.
